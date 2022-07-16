@@ -1,6 +1,6 @@
 # `documentarian-action`
 
-Documentarian is an opinionated bundle of tools to document (primarily) back-ends written in [TypeScript](https://www.typescriptlang.org) and using [Serverless Framework](https://www.serverless.com) and then uploading the docs to [Cloudflare Pages](https://pages.cloudflare.com). As far as documenting CloudFormation, Documentarian is assuming you will use Serverless Framework to produce the stack but it could come from any source as long as it's valid CloudFormation.
+Documentarian is an opinionated bundle of tools that generates docs for (primarily) back-ends written in [TypeScript](https://www.typescriptlang.org) and using [Serverless Framework](https://www.serverless.com) which it will then upload to [Cloudflare Pages](https://pages.cloudflare.com). As far as documenting CloudFormation, Documentarian is assuming you will use Serverless Framework to produce the stack but it could come from any source as long as it's valid CloudFormation.
 
 Under the hood this action uses:
 
