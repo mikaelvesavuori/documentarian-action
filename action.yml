@@ -1,4 +1,4 @@
-name: 'documentarian'
+name: 'documentarian-action'
 description: 'A bundle of tools to document your application'
 branding:
   icon: 'edit'
