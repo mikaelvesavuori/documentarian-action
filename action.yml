@@ -1,0 +1,60 @@
+name: 'documentarian'
+description: 'A bundle of tools to document your application'
+branding:
+  icon: 'edit'
+  color: 'purple'
+inputs:
+  src_folder:
+    description: 'Path to source code.'
+    default: 'src'
+    required: true
+  docs_folder:
+    description: 'Path to output documentation folder'
+    default: 'docs'
+    required: true
+  schema_path:
+    description: 'Path to API schema file'
+    default: ''
+    required: false
+  cloudformation_path:
+    description: 'The path to the CloudFormation JSON'
+    default: ''
+    required: false
+  catalogist_endpoint:
+    description: 'Catalogist endpoint URL'
+    default: ''
+    required: false
+  catalogist_api_key:
+    description: 'Catalogist API key'
+    default: ''
+    required: false
+  cloudflare_account_id:
+    description: 'Cloudflare account ID'
+    default: ''
+    required: false
+  cloudflare_auth_token:
+    description: 'Cloudflare direct upload authentication token'
+    default: ''
+    required: false
+  cloudflare_project_name:
+    description: 'Cloudflare project name'
+    default: ''
+    required: false
+  cloudflare_catalog_name:
+    description: 'Cloudflare project name for EventCatalog'
+    default: ''
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.src_folder }}
+    - ${{ inputs.docs_folder }}
+    - ${{ inputs.schema_path }}
+    - ${{ inputs.cloudformation_path }}
+    - ${{ inputs.catalogist_endpoint }}
+    - ${{ inputs.catalogist_api_key }}
+    - ${{ inputs.cloudflare_account_id }}
+    - ${{ inputs.cloudflare_auth_token }}
+    - ${{ inputs.cloudflare_project_name }}
+    - ${{ inputs.cloudflare_catalog_name }}
