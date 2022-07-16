@@ -1,5 +1,5 @@
 name: 'documentarian-action'
-description: 'A bundle of tools to document your application'
+description: 'A bundle of tools to document your TS/Serverless application and upload to Cloudflare Pages'
 branding:
   icon: 'edit'
   color: 'purple'
