@@ -36,6 +36,7 @@ echo "CLOUDFLARE_CATALOG_NAME is: $CLOUDFLARE_CATALOG_NAME"
 main() {
   # Ensure we have the directories set up for later
   mkdir -p "$DOCS_FOLDER/api"
+  mkdir -p "$DOCS_FOLDER/reports"
 
   # For convenience, let's just bundle all Node stuff into a single check
   if [ -f "package.json" ]; then
@@ -73,7 +74,7 @@ setOwnership() {
 
 runSyft() {
   echo "Running syft..."
-  syft packages dir:. >"$DOCS_FOLDER/syft_report.txt"
+  syft packages dir:. >"$DOCS_FOLDER/reports/sbom.txt"
 }
 
 generateTypedoc() {
