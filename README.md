@@ -108,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Publish docs
-        uses: mikaelvesavuori/documentarian-action@v1.0.1
+        uses: mikaelvesavuori/documentarian-action@v1.0.2
         with:
           schema_path: "api/schema.json"
           cloudformation_path: ".serverless/cloudformation-template-update-stack.json"

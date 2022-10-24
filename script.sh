@@ -42,9 +42,9 @@ main() {
   if [ -f "package.json" ]; then
     installNodeDependencies
     setOwnership
-    runSyft
     generateTypedoc
     generateMadge
+    runSyft
   fi
 
   # All of these have their own respective checks before running
